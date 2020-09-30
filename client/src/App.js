@@ -6,9 +6,13 @@ import {BrowserRouter as Router, Switch, Route, Redirect} from "react-router-dom
 
 // Components
 
-import Dashboard from "./components/Dashboard";
+import Dashboard from "./components/dashboard/Dashboard";
 import Login from "./components/Login";
 import Register from "./components/Register";
+import Landing from "./components/Landing";
+import Header from "./components/layouts/Header";
+import Chatroom from "./components/chatroom/Chatroom";
+
 
 toast.configure();
 
@@ -42,9 +46,33 @@ function App() {
 
   return (
     <Fragment>
+      <Header />
       <Router>
         <div className="container">
           <Switch>
+          <Route 
+            exact 
+            path="/" 
+            render={props => 
+              !isAuthenticated ? (
+                <Landing {...props}  />
+              ) : (
+                <Redirect to="/dashboard" />
+              )
+            }
+            />
+
+          <Route 
+            exact 
+            path="/chatroom" 
+            render={props => 
+            isAuthenticated ? (
+              <Chatroom {...props} setAuth={setAuth} />
+              ) : (
+                <Redirect to ="/chatroom" />
+              )
+            }
+            />
             
             <Route 
             exact 

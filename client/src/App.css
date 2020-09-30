@@ -28,6 +28,8 @@
   color: #61dafb;
 }
 
+
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -35,4 +37,233 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+h1 {
+  text-align: center;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+* {box-sizing: border-box;}
+
+.divider {
+padding: 40px;
+}
+
+#plasticInput {
+  padding-left: 8px;
+}
+
+
+#plasticInput {
+  border-color: hsl(0,0%,80%);
+  border-radius: 4px;
+  border-style: solid;
+  border-width: 1px;
+  min-height: 38px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700');
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: sans-serif;
+}
+
+body {
+  margin: 1;
+  background-color: rgba(163, 97, 172, 0.06);
+}
+
+
+.header {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 47px;
+    display: block;
+    border-bottom-style: solid;
+    border-width: 1px;
+    border-color: rgb(163, 97, 172);
+    position: fixed;
+    top: 0px;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+    background-color: #FFFFFF;
+    z-index: 1;
+
+}
+
+.inner-header {
+    display: block;
+    width: 70%;
+    position: fixed;
+    top: 0;
+    z-index: 2;
+    margin-top: 15px;
+}
+
+#logo {
+    float: left;
+    display: table-cell;
+    vertical-align: middle;
+    height: 80%;
+    margin-left: 10px;
+    margin-top: 6px;
+}
+
+.logoText {
+    margin-left: 5px;
+    height: 100%;
+    display: table;
+    float: left;
+}
+
+.logoText h1 {
+    vertical-align: middle;
+    display: table-cell;
+    height: 100%;
+    color:rgb(163, 97, 172);
+    font-size: 15px;
+    font-weight: 100;
+}
+
+.logoText h1 span {
+    font-weight: 900;
+    text-shadow: -1px 0 gray;
+}
+
+.navigation_icons{
+  position: relative;
+    bottom: 6px;
+    margin-left: 30px;
+    text-decoration: none;
+    font-size:22px;
+    color: rgb(163, 97, 172);
+    float: right;
+    background-color: white;
+    border: none;
+}
+
+.feed{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.post{
+    width:60%;
+    background-color: white;
+    border-radius: 5px;
+    border:1px solid rgb(163, 97, 172);
+    max-width: 800px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.postHeader{
+    padding: 1px 20px;
+    display: flex;
+    align-items: center;
+    border-bottom:1px solid rgba(163, 97, 172,.0975);
+}
+
+.postAvatar{
+    height: 30px;
+    display: block;
+    width: 30px;
+    border-radius: 50%;
+    margin-right:15px;
+    margin-top: 4px;
+    border: 1px solid rgb(163, 97, 172);
+}
+
+.postUsername{
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: rgb(163, 97, 172);
+}
+
+.postContents {
+    display: block;
+    border-radius: 5px 25px 25px 5px;
+    padding: 10px;
+    width: 93%;
+    margin-bottom: 25px; 
+    margin-top: 15px;
+    font-size: 15px;
+
+    border: 2px solid rgb(163, 97, 172);
+    position: relative;
+  }
+
+
+
+.postInfo{
+    padding: 6px 20px 0 20px;
+}
+
+.postComment{
+    margin-top: 3px;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.postComment-author{
+    font-weight: 600;
+    margin-right: 5px;
+    color: rgb(163, 97, 172);
+}
+
+.postTime-ago{
+    color:#999;
+    text-transform: uppercase;
+    font-size: 10px;
+    display: block;
+    float: right;
+    position: relative;
+    top: -22px;
+}
+
+.postAdd-comment-container{
+    position: relative;
+    height: 20px;
+    top: -5px;
+    margin-top: 5px;
+    padding-top: 2px;
+    padding-bottom: 5px;
+}
+
+.postAdd-comment{
+    width: 97%;
+    height: 80%;
+    border:0;
+    resize: none;
+    font-size: 14px;
+}
+
+.postAdd-comment:focus{
+    outline: none;
+}
+
+.footer {
+  margin: 50px;
+}
+
+#bagOwner {
+  margin-top: 80px !important;
+}
+
+#chatMessage {
+  position: relative;
+  top: 100px;
 }

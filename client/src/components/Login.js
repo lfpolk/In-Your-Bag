@@ -1,6 +1,8 @@
 import React, { Fragment, useState } from "react";
-import {Link, Redirect} from "react-router-dom";
+import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
+
+import Header from "./layouts/Header";
 
 const Login = ({ setAuth }) => {
 
@@ -45,6 +47,7 @@ const Login = ({ setAuth }) => {
     }
 
     return (
+        
         <Fragment>
             <h1 className="text-center my-5">
                 Login
