@@ -15,7 +15,7 @@ const InnerHeader = ( { setAuth }) => {
 return (
     <Fragment>
         <div class="inner-header">
-            <a href=" ">
+            <a href="/dashboard">
             <img id="logo"></img>
             <div class="logoText">
                 <h1>IN<span>YOURBAG</span></h1>

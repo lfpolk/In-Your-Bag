@@ -2,16 +2,14 @@ import React, { Fragment, useState } from "react";
 import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
 
-import Header from "./layouts/Header";
-
 const Login = ({ setAuth }) => {
 
     const [inputs, setInputs] = useState({
-        email: "",
+        username: "",
         password: "",
     });
 
-    const { email, password } = inputs;
+    const { username, password } = inputs;
 
     const onChange = e =>
     setInputs({ ...inputs, [e.target.name]: e.target.value });
@@ -20,7 +18,7 @@ const Login = ({ setAuth }) => {
         e.preventDefault()
         try {
 
-    const body = { email, password };
+    const body = { username, password };
 
             const response = await fetch("http://localhost:3000/auth/login", {
                 method: "POST",
@@ -31,7 +29,7 @@ const Login = ({ setAuth }) => {
             const parseRes = await response.json();
 
             if (parseRes.token) {
-                toast.success("Logged in as " + email)
+                toast.success("Logged in as " + username)
             }
             else {
                 setAuth(false);
@@ -49,16 +47,17 @@ const Login = ({ setAuth }) => {
     return (
         
         <Fragment>
+
             <h1 className="text-center my-5">
                 Login
             </h1>
             <form onSubmit={onSubmitForm}>
             <input
                     className="form-control my-3" 
-                    type="email" 
-                    name="email" 
-                    placeholder="email" 
-                    value={email} 
+                    type="text" 
+                    name="username" 
+                    placeholder="username" 
+                    value={username} 
                     onChange={e => onChange(e)}
                 />
             <input 

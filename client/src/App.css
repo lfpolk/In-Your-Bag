@@ -111,6 +111,7 @@ body {
     margin-top: 15px;
 }
 
+
 #logo {
     float: left;
     display: table-cell;
@@ -157,7 +158,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 30px;
+    margin-top: 60px;
 }
 
 .post{
@@ -236,19 +237,20 @@ body {
 
 .postAdd-comment-container{
     position: relative;
-    height: 20px;
-    top: -5px;
-    margin-top: 5px;
-    padding-top: 2px;
+    height: 30px;
+    padding-top: 0px;
     padding-bottom: 5px;
+
 }
 
 .postAdd-comment{
+
     width: 97%;
     height: 80%;
     border:0;
     resize: none;
     font-size: 14px;
+    
 }
 
 .postAdd-comment:focus{
@@ -266,4 +268,9 @@ body {
 #chatMessage {
   position: relative;
   top: 100px;
+}
+
+.btn-success, .btn-success:hover, .btn-success:active, .btn-success:visited {
+  background-color: rgb(163, 97, 172);
+  border-color: rgb(163, 97, 172);
 }

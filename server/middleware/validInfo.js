@@ -1,22 +1,22 @@
 module.exports = function(req, res, next) {
-    const { email, name, password } = req.body;
+    const { username, name, password } = req.body;
   
-    function validEmail(userEmail) {
-      return /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(userEmail);
+    function validUsername(userUsername) {
+      return /^[0-9a-zA-Z]+$/.test(username);
     }
   
     if (req.path === "/register") {
-      console.log(!email.length);
-      if (![email, name, password].every(Boolean)) {
+      console.log(!username.length);
+      if (![username, name, password].every(Boolean)) {
         return res.json("Missing Credentials");
-      } else if (!validEmail(email)) {
-        return res.json("Invalid Email");
+      } else if (!validUsername(username)) {
+        return res.json("Username must only contain numbers and letters");
       }
     } else if (req.path === "/login") {
-      if (![email, password].every(Boolean)) {
+      if (![username, password].every(Boolean)) {
         return res.json("Missing Credentials");
-      } else if (!validEmail(email)) {
-        return res.json("Invalid Email");
+      } else if (!validUsername(username)) {
+        return res.json("Invalid username");
       }
     }
   

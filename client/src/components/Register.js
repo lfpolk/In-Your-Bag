@@ -5,12 +5,12 @@ import { toast } from "react-toastify";
 const Register = ({setAuth}) => {
 
     const [inputs, setInputs] = useState({
-        email: "",
+        username: "",
         password: "",
         name: ""
     })
 
-    const {email, password, name} = inputs;
+    const {username, password, name} = inputs;
 
     const onChange = (e) => {
         setInputs({...inputs, [e.target.name] : e.target.value})
@@ -19,7 +19,7 @@ const Register = ({setAuth}) => {
     const onSubmitForm = async (e) => {
         e.preventDefault()
         try {
-            const body = {email, password, name};
+            const body = {username, password, name};
 
             const response = await fetch("http://localhost:3000/auth/register", {
             method: "POST",
@@ -58,10 +58,10 @@ const Register = ({setAuth}) => {
             <form onSubmit={onSubmitForm}>
                 <input 
                     className="form-control my-3" 
-                    type="email" 
-                    name="email" 
-                    placeholder="email" 
-                    value={email} 
+                    type="username" 
+                    name="username" 
+                    placeholder="username" 
+                    value={username} 
                     onChange={e => onChange(e)}
                 />
                 <input 
