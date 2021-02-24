@@ -5,7 +5,6 @@ const cors = require("cors");
 app.use(express.json());
 app.use(cors());
 
-// Routes
 
 // Register
 

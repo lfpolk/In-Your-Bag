@@ -21,7 +21,6 @@ const Dashboard = ({setAuth}) => {
 
         const parseRes = await response.json();
         
-
         setAllDiscs(parseRes);
         console.log(parseRes);
         setName(parseRes[0].user_name);

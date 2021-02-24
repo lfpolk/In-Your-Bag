@@ -24,20 +24,6 @@ CREATE TABLE discs(
     type VARCHAR(40)
 );
 
-CREATE TABLE posts(
-    post_id SERIAL PRIMARY KEY,
-    user_username VARCHAR(255) REFERENCES users(user_username),
-    post_content VARCHAR(500) NOT NULL,
-    post_time TIMESTAMP
-);
-
-CREATE TABLE comments(
-    comment_id SERIAL PRIMARY KEY,
-    post_id SERIAL REFERENCES posts(post_id),
-    user_username VARCHAR(255) REFERENCES users(user_username),
-    comment_content VARCHAR(500) NOT NULL
-);
-
 --test users
 
 INSERT INTO users (user_name, user_username, user_password) VALUES ('Larson', 'larsonfpolk@gmail.com' , 'password08');

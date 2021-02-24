@@ -5,11 +5,11 @@ const authorization = require("../middleware/authorization");
 // Get users bag
 router.get("/", authorization, async(req, res) => {
     try {
-    console.log("SELECT * FROM users LEFT JOIN bag ON users.user_id = bag.user_id LEFT JOIN discs ON bag.disc_id = discs.disc_id WHERE users.user_id = $1 ORDER BY type DESC",
-    [req.user.id])
-    const user = await pool.query("SELECT * FROM users LEFT JOIN bag ON users.user_id = bag.user_id LEFT JOIN discs ON bag.disc_id = discs.disc_id WHERE users.user_id = $1 ORDER BY type DESC",
-    [req.user.id]
-    );
+    const user = await pool.query("SELECT * FROM users " +  
+                                  "LEFT JOIN bag ON users.user_id = bag.user_id LEFT JOIN discs ON bag.disc_id = discs.disc_id " +
+                                  "WHERE users.user_id = $1 ORDER BY type DESC",
+                                   [req.user.id]
+                                  );
 
     res.json(user.rows);
 

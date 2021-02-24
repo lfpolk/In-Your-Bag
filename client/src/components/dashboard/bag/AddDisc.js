@@ -1,10 +1,7 @@
 import React, { Fragment, useState, useEffect } from "react";
 import Select from 'react-select';
-import makeAnimated from 'react-select/animated';
 
 const AddDisc = ({ setDiscsChange }) => {
-
-    const [disc_id, setDiscID] = useState ("");
 
     const [discList, setDiscList] = useState ("");
 
