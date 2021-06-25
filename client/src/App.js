@@ -86,6 +86,7 @@ function App() {
             }
             />
 
+
             <Route 
             exact 
             path="/register" 
