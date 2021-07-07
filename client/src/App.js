@@ -98,8 +98,6 @@ function App() {
             }
             />
 
-
-
             <Route 
             exact 
             path="/dashboard" 
@@ -111,6 +109,7 @@ function App() {
               )
             }
             />
+            
             <Route 
             exact 
             path="/viewbag/:user_username" 
