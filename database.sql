@@ -7,13 +7,6 @@ CREATE TABLE users(
     user_password VARCHAR(255) NOT NULL
 );
 
-CREATE TABLE bag(
-
-    disc_id int REFERENCES discs(disc_id),
-    user_id UUID REFERENCES users(user_id),
-    plastic VARCHAR(40)
-);
-
 CREATE TABLE discs(
     disc_id SERIAL PRIMARY KEY,
     mold VARCHAR(40),
@@ -24,9 +17,16 @@ CREATE TABLE discs(
     type VARCHAR(40)
 );
 
+CREATE TABLE bag(
+    disc_id int REFERENCES discs(disc_id),
+    user_id UUID REFERENCES users(user_id),
+    plastic VARCHAR(40)
+);
+
+
 --test users
 
-INSERT INTO users (user_name, user_username, user_password) VALUES ('Larson', 'larsonfpolk@gmail.com' , 'password08');
+INSERT INTO users (user_name, user_username, user_password) VALUES ('Larson', 'larsonfpolk' , 'larson');
 
 --test bag
 

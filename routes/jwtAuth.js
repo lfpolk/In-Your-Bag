@@ -48,6 +48,7 @@ router.post("/register", validInfo, async (req, res) => {
 
     } catch (error) {
         console.error(error.message);
+        console.log('peepee poopoo')
         res.status(500).send("Server Error");
     }
 })
