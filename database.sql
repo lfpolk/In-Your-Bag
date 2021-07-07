@@ -1,4 +1,4 @@
-CREATE DATABASE in_your_bag;
+-- CREATE DATABASE in_your_bag;
 
 CREATE TABLE users(
     user_id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
