@@ -274,3 +274,11 @@ body {
   background-color: rgb(163, 97, 172);
   border-color: rgb(163, 97, 172);
 }
+
+a {
+  color: rgb(163, 97, 172);
+}
+
+a:hover{
+  text-decoration: none;
+}

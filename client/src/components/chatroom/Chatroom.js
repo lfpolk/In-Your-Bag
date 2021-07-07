@@ -43,7 +43,7 @@ return (
         <section class="post">
             <header class="postHeader">
                 <div class="postHeader-column">
-                    <span class="postUsername">Larson Polk</span>
+                    <span class="postUsername"><a href="https://in-your-bag.herokuapp.com/viewbag/lfpolk">Larson Polk</a></span>
                 </div>
                 <div class="postContents">
                     <span>The Chat room has yet to be implemented</span>
@@ -70,7 +70,7 @@ return (
             <header class="postHeader">
 
                 <div class="postHeader-column">
-                    <span class="postUsername">Larson Polk</span>
+                    <span class="postUsername"><a href="https://in-your-bag.herokuapp.com/viewbag/lfpolk">Larson Polk</a></span>
                 </div>
                 <div class="postContents">
                     <span>The chat room will be implemented soon, but you can check out what I throw by clicking on my name</span>
@@ -82,7 +82,7 @@ return (
                 <span class="postTime-ago">11 hours ago</span>
                 <ul class="postComments">
                     <li class="postComment">
-                        <span class="postComment-author">Larson Polk</span>In the meantime, use your home page to alter your bag and share with friends.
+                        <span class="postComment-author"><a href="https://in-your-bag.herokuapp.com/viewbag/lfpolk">Larson Polk</a></span>In the meantime, use your home page to alter your bag and share with friends.
                     </li>
                 </ul>                <div class="postAdd-comment-container">
                     <textarea placeholder="Comment..." class="postAdd-comment"></textarea>

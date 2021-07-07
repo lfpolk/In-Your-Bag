@@ -10,7 +10,6 @@ const Dashboard = ({setAuth}) => {
 
     var configLink = process.env.NODE_ENV === "production" ? "https://in-your-bag.herokuapp.com/viewbag/" : "http://localhost:5000/viewbag/"
 
-
     const [allDiscs, setAllDiscs] = useState([]);
     const [name, setName] = useState("");
     const [username, setUserName] = useState("");
