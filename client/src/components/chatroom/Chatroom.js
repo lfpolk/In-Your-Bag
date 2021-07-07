@@ -37,7 +37,7 @@ function timeSince(date) {
 
 return (
     <Fragment>
-        <InnerHeader setAuth={setAuth}/>
+        <InnerHeader/>
 
     <div class="feed">
         <section class="post">

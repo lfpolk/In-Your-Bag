@@ -21,9 +21,11 @@ return (
                 <h1>IN<span>YOURBAG</span></h1>
             </div>
             </a>
+{setAuth && 
             <button onClick={e => logout(e)} href="" class="navigation_icons">
                 <i class="fa fa-sign-out"></i>
                 </button>
+}
             <div class="navigation">
                 <a href="/dashboard" class="navigation_icons">
                 <i class="fa fa-user"></i>

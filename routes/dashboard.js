@@ -20,6 +20,29 @@ router.get("/", authorization, async(req, res) => {
 }
 );
 
+// Get users bag for viewing (No auth required)
+router.get("/viewbag/:user_username", async(req, res) => {
+    try {
+    const { user_username } = req.params;
+    console.log("SELECT * FROM users " +  
+    "LEFT JOIN bag ON users.user_id = bag.user_id LEFT JOIN discs ON bag.disc_id = discs.disc_id " +
+    "WHERE users.user_username = $1 ORDER BY type DESC",
+     [user_username])
+    const user = await pool.query("SELECT * FROM users " +  
+                                  "LEFT JOIN bag ON users.user_id = bag.user_id LEFT JOIN discs ON bag.disc_id = discs.disc_id " +
+                                  "WHERE users.user_username = $1 ORDER BY type DESC",
+                                   [user_username]
+                                  );
+
+    res.json(user.rows);
+
+    } catch (error) {
+        console.error(error.message);
+        res.status(500).json("Server Error");
+    }
+}
+);
+
 // Add disc to bag
 router.post('/bag', authorization, async (req, res) => {
     try {

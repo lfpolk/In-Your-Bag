@@ -12,6 +12,7 @@ import Register from "./components/Register";
 import Landing from "./components/Landing";
 import Header from "./components/layouts/Header";
 import Chatroom from "./components/chatroom/Chatroom";
+import ViewBag from './components/viewbag/ViewBag';
 
 
 toast.configure();
@@ -26,7 +27,7 @@ function App() {
   async function isAuth(){
     try {
       
-      const response = await fetch("http://localhost:3000/auth/is-verify", {
+      const response = await fetch("/auth/is-verify", {
       method: "GET",
       headers: {token : localStorage.token}
     }
@@ -66,11 +67,9 @@ function App() {
             exact 
             path="/chatroom" 
             render={props => 
-            isAuthenticated ? (
+
               <Chatroom {...props} setAuth={setAuth} />
-              ) : (
-                <Redirect to ="/chatroom" />
-              )
+
             }
             />
             
@@ -112,6 +111,14 @@ function App() {
               )
             }
             />
+            <Route 
+            exact 
+            path="/viewbag/:user_username" 
+            render={props => 
+              <ViewBag {...props} setAuth={setAuth} />
+            }
+            />
+
 
           </Switch>
         </div>

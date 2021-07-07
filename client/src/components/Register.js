@@ -1,6 +1,7 @@
 import React, { Fragment, useState } from "react";
 import {Link} from "react-router-dom";
 import { toast } from "react-toastify";
+import InnerHeader from "./layouts/InnerHeader";
 
 const Register = ({setAuth}) => {
 
@@ -21,7 +22,7 @@ const Register = ({setAuth}) => {
         try {
             const body = {username, password, name};
 
-            const response = await fetch("http://localhost:3000/auth/register", {
+            const response = await fetch("/auth/register", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(body)
@@ -51,6 +52,7 @@ const Register = ({setAuth}) => {
 
     return (
         <Fragment>
+            <InnerHeader/> 
             <h1 className="text-center my-5">
                 Register
             </h1>

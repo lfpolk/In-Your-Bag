@@ -18,7 +18,7 @@ const AddDisc = ({ setDiscsChange }) => {
             myHeaders.append("token", localStorage.token);
             
             const body = { disc_id, plastic }
-            const response = await fetch("http://localhost:3000/dashboard/bag", {
+            const response = await fetch("/dashboard/bag", {
                 method: "POST",
                 headers: myHeaders,
                 body: JSON.stringify(body)
@@ -33,7 +33,7 @@ const AddDisc = ({ setDiscsChange }) => {
     };
 
     async function getDiscs() {
-        const res = await fetch("http://localhost:3000/dashboard/discs")
+        const res = await fetch("/dashboard/discs")
     
         const discArray = await res.json();
         setDiscList(discArray);

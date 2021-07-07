@@ -12,7 +12,7 @@ const ShowDiscs = ({ allDiscs, setDiscsChange }) => {
             if (plastic === ''){
                 plastic = 'empty';
             }
-            var link = ('http://localhost:3000/dashboard/bag/' + id + '/' + plastic);
+            var link = ('/dashboard/bag/' + id + '/' + plastic);
 
             const res = await fetch(link, {
                 method: "DELETE",

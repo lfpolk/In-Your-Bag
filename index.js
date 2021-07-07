@@ -10,7 +10,9 @@ app.use(cors());
 //process.ev.PORT
 //process.env.NODE_ENV =? production or undefined
 
-app.use(express.static("client/build"))
+// app.use(express.static(path.join(__dirname, "client/build")));
+//app.use(express.static("client/build"))
+console.log(process.env.NODE_ENV)
 
 if (process.env.NODE_ENV === 'production'){
     // serve static content
@@ -18,7 +20,7 @@ if (process.env.NODE_ENV === 'production'){
     app.use(express.static(path.join(__dirname, "client/build")));
 }
 // Register
-console.log('finna dirnam')
+
 console.log(__dirname)
  
 app.use("/auth", require("./routes/jwtAuth"));
@@ -26,6 +28,10 @@ app.use("/auth", require("./routes/jwtAuth"));
 // Dashboard
 
 app.use("/dashboard", require("./routes/dashboard"));
+
+app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname, "client/build/index.html"))
+});
 
 // Run Server
 app.listen(PORT, () => {
