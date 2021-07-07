@@ -36,5 +36,5 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "https://in-your-bag.herokuapp.com"
+  "proxy": "http://localhost:3000"
 }
